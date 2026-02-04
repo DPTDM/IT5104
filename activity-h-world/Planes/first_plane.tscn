@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ddv8o6ryqn17w"]
+
+[ext_resource type="PackedScene" uid="uid://b87iqxbvw0ewo" path="res://Characters/player_dragon.tscn" id="1_efga8"]
+
+[node name="FirstPlane" type="Node2D" unique_id=696910238]
+
+[node name="PlayerDragon" parent="." unique_id=538271310 instance=ExtResource("1_efga8")]
+position = Vector2(649, 219)
