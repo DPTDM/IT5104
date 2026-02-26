@@ -1,0 +1,230 @@
+[gd_scene format=3 uid="uid://ferthyo46aqg"]
+
+[ext_resource type="PackedScene" uid="uid://c71sjecm37ws2" path="res://Assets/Scenes/AreaTemplate/area_template.tscn" id="1_si01f"]
+[ext_resource type="PackedScene" uid="uid://dnmeh1srwwqx0" path="res://Assets/Scenes/moving_platform.tscn" id="2_y4hc0"]
+
+[sub_resource type="Curve2D" id="Curve2D_y4hc0"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 159, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_fsu62"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -187)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_oqdf5"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 159, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_1tu6k"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 295, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_5tyl7"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 159, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_c68sv"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 159, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_5wurn"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 159, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_37pdr"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 159, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_suwsi"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 312, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_4nue2"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -129, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_l236t"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -129, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_5rtpb"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -129, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_nb4yu"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -129, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_prm1h"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -129, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_x44xb"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -129, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_3rm1m"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -129, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_66qte"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -129, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_fjkh4"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -289, 0)
+}
+point_count = 2
+
+[node name="Area2" unique_id=1661169590 instance=ExtResource("1_si01f")]
+
+[node name="TileMap" parent="." index="0" unique_id=236015097]
+layer_0/tile_data = PackedInt32Array(3145739, 65536, 1, 3211275, 65536, 2, 3145740, 131072, 1, 3211276, 131072, 2, 3145741, 458752, 1, 3211277, 458752, 2, 3145742, 524288, 1, 3211278, 524288, 2, 3276811, 65536, 7, 3342347, 65536, 8, 3342349, 458752, 8, 3276814, 524288, 7, 3342350, 524288, 8, 3276812, 131072, 7, 3342348, 131072, 8, 3276813, 458752, 7, 3932167, 65536, 1, 3997703, 65536, 2, 3932168, 131072, 1, 3997704, 131072, 2, 3932169, 262144, 1, 3997705, 262144, 2, 3932170, 327680, 1, 3997706, 327680, 2, 3932171, 262144, 1, 3997707, 262144, 2, 3932172, 327680, 1, 3997708, 327680, 2, 3932173, 262144, 1, 3997709, 262144, 2, 3932174, 327680, 1, 3997710, 327680, 2, 3932175, 262144, 1, 3997711, 262144, 2, 3932176, 327680, 1, 3997712, 327680, 2, 3932177, 262144, 1, 3997713, 262144, 2, 3932178, 327680, 1, 3997714, 327680, 2, 3932179, 262144, 1, 3997715, 262144, 2, 3932180, 327680, 1, 3997716, 327680, 2, 3932181, 262144, 1, 3997717, 262144, 2, 3932182, 327680, 1, 3997718, 327680, 2, 3932183, 262144, 1, 3997719, 262144, 2, 3932184, 327680, 1, 3997720, 327680, 2, 3932185, 262144, 1, 3997721, 262144, 2, 3932186, 327680, 1, 3997722, 327680, 2, 3932187, 262144, 1, 3997723, 262144, 2, 3932188, 327680, 1, 3997724, 327680, 2, 3932189, 262144, 1, 3997725, 262144, 2, 3932190, 327680, 1, 3997726, 327680, 2, 3932191, 262144, 1, 3997727, 262144, 2, 3932192, 327680, 1, 3997728, 327680, 2, 3932193, 262144, 1, 3997729, 262144, 2, 3932194, 327680, 1, 3997730, 327680, 2, 3932195, 262144, 1, 3997731, 262144, 2, 3932196, 327680, 1, 3997732, 327680, 2, 3932197, 262144, 1, 3997733, 262144, 2, 3932198, 327680, 1, 3997734, 327680, 2, 3932199, 262144, 1, 3997735, 262144, 2, 3932200, 327680, 1, 3997736, 327680, 2, 3932201, 262144, 1, 3997737, 262144, 2, 3932202, 327680, 1, 3997738, 327680, 2, 3932203, 262144, 1, 3997739, 262144, 2, 3932204, 327680, 1, 3997740, 327680, 2, 3932205, 262144, 1, 3997741, 262144, 2, 3932206, 327680, 1, 3997742, 327680, 2, 3932207, 262144, 1, 3997743, 262144, 2, 3932208, 327680, 1, 3997744, 327680, 2, 3932209, 262144, 1, 3997745, 262144, 2, 3932210, 327680, 1, 3997746, 327680, 2, 3932211, 262144, 1, 3997747, 262144, 2, 3932212, 327680, 1, 3997748, 327680, 2, 3932213, 262144, 1, 3997749, 262144, 2, 3932214, 327680, 1, 3997750, 327680, 2, 3932215, 262144, 1, 3997751, 262144, 2, 3932216, 327680, 1, 3997752, 327680, 2, 3932217, 262144, 1, 3997753, 262144, 2, 3932218, 327680, 1, 3997754, 327680, 2, 3932219, 262144, 1, 3997755, 262144, 2, 3932220, 327680, 1, 3997756, 327680, 2, 3932221, 262144, 1, 3997757, 262144, 2, 3932222, 327680, 1, 3997758, 327680, 2, 3932223, 262144, 1, 3997759, 262144, 2, 3932224, 327680, 1, 3997760, 327680, 2, 3932225, 262144, 1, 3997761, 262144, 2, 3932226, 327680, 1, 3997762, 327680, 2, 3932227, 262144, 1, 3997763, 262144, 2, 3932228, 327680, 1, 3997764, 327680, 2, 3932229, 262144, 1, 3997765, 262144, 2, 3932230, 327680, 1, 3997766, 327680, 2, 3932231, 262144, 1, 3997767, 262144, 2, 3932232, 327680, 1, 3997768, 327680, 2, 3932233, 262144, 1, 3997769, 262144, 2, 3932234, 327680, 1, 3997770, 327680, 2, 3932235, 262144, 1, 3997771, 262144, 2, 3932236, 327680, 1, 3997772, 327680, 2, 3932237, 262144, 1, 3997773, 262144, 2, 3932238, 327680, 1, 3997774, 327680, 2, 3932239, 262144, 1, 3997775, 262144, 2, 3932240, 327680, 1, 3997776, 327680, 2, 3932241, 458752, 1, 3997777, 458752, 2, 3932242, 524288, 1, 3997778, 524288, 2, 3145802, 65536, 1, 3211338, 65536, 2, 3276874, 65536, 7, 3342410, 65536, 8, 3145803, 131072, 1, 3211339, 131072, 2, 3276875, 131072, 7, 3342411, 131072, 8, 3145804, 458752, 1, 3211340, 458752, 2, 3276876, 458752, 7, 3342412, 458752, 8, 3145805, 524288, 1, 3211341, 524288, 2, 3276877, 524288, 7, 3342413, 524288, 8)
+
+[node name="Player" parent="." index="1" unique_id=518383510]
+can_dash = false
+
+[node name="AreaExit" parent="." index="2" unique_id=27692624]
+position = Vector2(1231, 751)
+
+[node name="Platforms" type="Node2D" parent="." index="3" unique_id=473301983]
+
+[node name="MovingPlatform" parent="Platforms" index="0" unique_id=883148904 instance=ExtResource("2_y4hc0")]
+position = Vector2(254, 766)
+curve = SubResource("Curve2D_y4hc0")
+
+[node name="MovingPlatform9" parent="Platforms" index="1" unique_id=488004188 instance=ExtResource("2_y4hc0")]
+position = Vector2(139, 953)
+curve = SubResource("Curve2D_fsu62")
+
+[node name="MovingPlatform3" parent="Platforms" index="2" unique_id=361812149 instance=ExtResource("2_y4hc0")]
+position = Vector2(553, 736)
+curve = SubResource("Curve2D_oqdf5")
+
+[node name="MovingPlatform4" parent="Platforms" index="3" unique_id=998450252 instance=ExtResource("2_y4hc0")]
+position = Vector2(519, 803)
+curve = SubResource("Curve2D_1tu6k")
+path_time = 3.0
+
+[node name="MovingPlatform5" parent="Platforms" index="4" unique_id=1233878944 instance=ExtResource("2_y4hc0")]
+position = Vector2(675, 772)
+curve = SubResource("Curve2D_5tyl7")
+path_time = 1.0
+
+[node name="MovingPlatform16" parent="Platforms" index="5" unique_id=1338826291 instance=ExtResource("2_y4hc0")]
+position = Vector2(858, 799)
+curve = SubResource("Curve2D_c68sv")
+
+[node name="MovingPlatform17" parent="Platforms" index="6" unique_id=315009671 instance=ExtResource("2_y4hc0")]
+position = Vector2(908, 872)
+curve = SubResource("Curve2D_5wurn")
+path_time = 4.0
+
+[node name="MovingPlatform18" parent="Platforms" index="7" unique_id=2017972840 instance=ExtResource("2_y4hc0")]
+position = Vector2(837, 713)
+curve = SubResource("Curve2D_37pdr")
+path_time = 6.0
+
+[node name="MovingPlatform10" parent="Platforms" index="8" unique_id=833531381 instance=ExtResource("2_y4hc0")]
+position = Vector2(811, 739)
+curve = SubResource("Curve2D_suwsi")
+path_time = 5.0
+
+[node name="MovingPlatform2" parent="Platforms" index="9" unique_id=75973738 instance=ExtResource("2_y4hc0")]
+position = Vector2(553, 767)
+curve = SubResource("Curve2D_4nue2")
+
+[node name="MovingPlatform6" parent="Platforms" index="10" unique_id=1475108936 instance=ExtResource("2_y4hc0")]
+position = Vector2(772, 711)
+curve = SubResource("Curve2D_l236t")
+path_time = 1.0
+
+[node name="MovingPlatform7" parent="Platforms" index="11" unique_id=1246163403 instance=ExtResource("2_y4hc0")]
+position = Vector2(844, 758)
+curve = SubResource("Curve2D_5rtpb")
+path_time = 4.0
+
+[node name="MovingPlatform11" parent="Platforms" index="12" unique_id=1152960175 instance=ExtResource("2_y4hc0")]
+position = Vector2(1101, 759)
+curve = SubResource("Curve2D_nb4yu")
+path_time = 4.0
+
+[node name="MovingPlatform12" parent="Platforms" index="13" unique_id=443311753 instance=ExtResource("2_y4hc0")]
+position = Vector2(996, 779)
+curve = SubResource("Curve2D_prm1h")
+
+[node name="MovingPlatform13" parent="Platforms" index="14" unique_id=1203001727 instance=ExtResource("2_y4hc0")]
+position = Vector2(995, 722)
+curve = SubResource("Curve2D_x44xb")
+path_time = 1.0
+
+[node name="MovingPlatform14" parent="Platforms" index="15" unique_id=1969251509 instance=ExtResource("2_y4hc0")]
+position = Vector2(1119, 816)
+curve = SubResource("Curve2D_3rm1m")
+path_time = 1.0
+
+[node name="MovingPlatform15" parent="Platforms" index="16" unique_id=1799066666 instance=ExtResource("2_y4hc0")]
+position = Vector2(988, 838)
+curve = SubResource("Curve2D_66qte")
+path_time = 3.0
+
+[node name="MovingPlatform8" parent="Platforms" index="17" unique_id=1429964432 instance=ExtResource("2_y4hc0")]
+position = Vector2(772, 837)
+curve = SubResource("Curve2D_fjkh4")
+path_time = 10.0
+
+[node name="Spike" parent="." index="4" unique_id=1882187514]
+position = Vector2(-229, 517)
