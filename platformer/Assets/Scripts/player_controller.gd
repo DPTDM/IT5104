@@ -8,6 +8,9 @@ class_name PlayerController
 @export var dash_duration = 0.2      # how long dash lasts (seconds)
 @export var can_dash = true          # toggle option in Inspector
 @export var dash_cooldown = 1.0      # cooldown time in seconds (Inspector)
+@export var camera : Camera2D
+
+@onready var jump_sound: AudioStreamPlayer = $JumpSound
 
 var speed_multiplier = 30.0
 var jump_multiplier = -30.0
@@ -19,6 +22,7 @@ var dash_on_cooldown = false
 func _input(event):
 	if event.is_action_pressed("Jump") and is_on_floor():
 		velocity.y = jump_pwr * jump_multiplier
+		jump_sound.play()
 
 	if event.is_action_pressed("MoveDown"):
 		set_collision_mask_value(10, false)
@@ -64,3 +68,11 @@ func start_dash():
 	dash_on_cooldown = true
 	await get_tree().create_timer(dash_cooldown).timeout
 	# Cooldown will auto-reset when landing, but this ensures a minimum wait
+
+
+func teleport_to_location(new_location):
+	camera.position_smoothing_enabled = false
+	position = new_location
+	await get_tree().physics_frame
+	camera.position_smoothing_enabled = true
+	
