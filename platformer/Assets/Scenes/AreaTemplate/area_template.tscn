@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://c71sjecm37ws2"]
 
 [ext_resource type="Texture2D" uid="uid://bjogju3x1m72" path="res://Assets/Sprites/Tileset-removebg-preview.png" id="1_uidp5"]
-[ext_resource type="PackedScene" uid="uid://bx6lc7xgfja4x" path="res://Assets/Scenes/Player.tscn" id="2_3uyhe"]
 [ext_resource type="PackedScene" uid="uid://iasxb0x6xqqr" path="res://Assets/Scenes/AreaTemplate/area_exit.tscn" id="3_hkjub"]
 [ext_resource type="PackedScene" uid="uid://cxvgf61ua6bl" path="res://Assets/Scenes/AreaTemplate/Spike.tscn" id="4_8vp4n"]
+[ext_resource type="PackedScene" uid="uid://345h601jllrk" path="res://Assets/Scenes/DemonEnemy.tscn" id="5_1cura"]
+[ext_resource type="PackedScene" uid="uid://dsf6q6ju5y532" path="res://Assets/Scenes/EnergyCell.tscn" id="5_dusa5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3uyhe"]
 texture = ExtResource("1_uidp5")
@@ -640,7 +641,16 @@ terrain_set_0/terrain_0/name = "Ground"
 terrain_set_0/terrain_0/color = Color(0.6932829, 0.10013362, 0.31202552, 1)
 sources/0 = SubResource("TileSetAtlasSource_3uyhe")
 
+[sub_resource type="Curve2D" id="Curve2D_dusa5"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200, 0)
+}
+point_count = 2
+
 [node name="AreaTemplate" type="Node2D" unique_id=1661169590]
+
+[node name="PlayerStartPosition" type="Node2D" parent="." unique_id=1418986893 groups=["player_start"]]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=236015097]
 position = Vector2(-4, -5)
@@ -649,11 +659,26 @@ format = 2
 layer_0/name = "MidBG"
 layer_0/tile_data = PackedInt32Array(3145738, 65536, 1, 3211274, 65536, 2, 3145739, 131072, 1, 3211275, 131072, 2, 3145740, 262144, 1, 3211276, 262144, 2, 3145741, 327680, 1, 3211277, 327680, 2, 3145742, 458752, 1, 3211278, 458752, 2, 3145743, 524288, 1, 3211279, 524288, 2, 3276810, 65536, 7, 3342346, 65536, 8, 3276811, 131072, 7, 3342347, 131072, 8, 3342349, 327680, 8, 3276814, 458752, 7, 3342350, 458752, 8, 3276815, 524288, 7, 3342351, 524288, 8, 3276812, 262144, 7, 3342348, 262144, 8, 3276813, 327680, 7)
 
-[node name="Player" parent="." unique_id=518383510 instance=ExtResource("2_3uyhe")]
-position = Vector2(183, 756)
-
 [node name="AreaExit" parent="." unique_id=27692624 instance=ExtResource("3_hkjub")]
 position = Vector2(241, 752)
 
 [node name="Spike" parent="." unique_id=1882187514 instance=ExtResource("4_8vp4n")]
 position = Vector2(199, 723)
+
+[node name="EnergyCells" type="Node2D" parent="." unique_id=259885439]
+
+[node name="EnergyCell1" parent="EnergyCells" unique_id=293273046 instance=ExtResource("5_dusa5")]
+position = Vector2(276, 668)
+
+[node name="EnergyCell2" parent="EnergyCells" unique_id=324211752 instance=ExtResource("5_dusa5")]
+position = Vector2(242, 699)
+
+[node name="EnergyCell3" parent="EnergyCells" unique_id=1176371578 instance=ExtResource("5_dusa5")]
+position = Vector2(235, 671)
+
+[node name="EnergyCell4" parent="EnergyCells" unique_id=1150399477 instance=ExtResource("5_dusa5")]
+position = Vector2(271, 689)
+
+[node name="Enemy" parent="." unique_id=2016457016 instance=ExtResource("5_1cura")]
+position = Vector2(389, 686)
+curve = SubResource("Curve2D_dusa5")

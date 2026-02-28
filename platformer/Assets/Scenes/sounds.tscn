@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b6skbslyrhlk1"]
+
+[ext_resource type="AudioStream" uid="uid://be60asa1gkpcx" path="res://Assets/Sounds/metalpipe.mp3" id="1_kcey8"]
+
+[node name="Sounds" type="Node2D" unique_id=1758480924 groups=["sounds"]]
+
+[node name="Death" type="AudioStreamPlayer" parent="." unique_id=802718545]
+stream = ExtResource("1_kcey8")
+volume_db = -35.682

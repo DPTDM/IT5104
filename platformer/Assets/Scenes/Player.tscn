@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bp0pu8sxf03n6" path="res://Assets/Scripts/player_controller.gd" id="1_b2ifw"]
 [ext_resource type="Script" uid="uid://dewpvdf8dse2y" path="res://Assets/Scripts/player_animator.gd" id="2_aee6e"]
 [ext_resource type="Texture2D" uid="uid://c5ahfuynh0rwv" path="res://Assets/Sprites/player.png" id="2_b2ifw"]
+[ext_resource type="AudioStream" uid="uid://dt6yw5b1riun5" path="res://Assets/Sounds/lumora_studios-pixel-jump-319167.mp3" id="4_e5q2x"]
 
 [sub_resource type="Animation" id="Animation_mifcl"]
 resource_name = "Fall"
@@ -99,11 +100,12 @@ _data = {
 radius = 5.0
 height = 14.0
 
-[node name="Player" type="CharacterBody2D" unique_id=518383510]
+[node name="Player" type="CharacterBody2D" unique_id=518383510 node_paths=PackedStringArray("camera") groups=["player"]]
 collision_mask = 768
 script = ExtResource("1_b2ifw")
 speed = 6.0
 dash_duration = 0.1
+camera = NodePath("Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1026745607]
 offset = Vector2(0, -10)
@@ -132,3 +134,7 @@ region_rect = Rect2(0, 0, 16, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1746093107]
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_b2ifw")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=1102974611]
+stream = ExtResource("4_e5q2x")
+volume_db = -15.165
