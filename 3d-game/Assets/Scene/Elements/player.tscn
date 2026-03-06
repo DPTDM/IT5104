@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://f8x0dojufpa2"]
+
+[ext_resource type="Script" uid="uid://cp1e3b1ybt0mg" path="res://Assets/Scripts/player.gd" id="1_wb14i"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_i1oqq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wb14i"]
+
+[node name="Player" type="CharacterBody3D" unique_id=757547875]
+script = ExtResource("1_wb14i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1718112385]
+mesh = SubResource("BoxMesh_i1oqq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1986960126]
+shape = SubResource("BoxShape3D_wb14i")
+
+[node name="Camera_Controller" type="Node3D" parent="." unique_id=569331543]
+top_level = true
+
+[node name="CameraTarget" type="Node3D" parent="Camera_Controller" unique_id=887872667]
+transform = Transform3D(1, 0, 0, 0, 0.9252098, 0.37945616, 0, -0.37945622, 0.9252097, -0.060265545, 2.251873, 4.314)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/CameraTarget" unique_id=500785364]
+current = true
