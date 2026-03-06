@@ -58,6 +58,19 @@ func _on_frame_changed():
 	if anim.animation == "Attack" and anim.frame == 3 and can_shoot:
 		shoot_projectile(last_target_pos)
 		start_cooldown()
+	
+	if anim.animation == "Flying" and anim.frame == 1:
+		var sounds_node
+		var player = get_tree().get_first_node_in_group("player")
+		if player and global_position.distance_to(player.global_position) < 300:
+			sounds_node = get_tree().get_first_node_in_group("sounds")
+			if sounds_node:
+				var flap_sound = sounds_node.get_node_or_null("Flap")
+				if flap_sound and flap_sound is AudioStreamPlayer and flap_sound.stream:
+					flap_sound.play()
+
+
+
 
 func _on_animation_finished():
 	if anim.animation == "Attack":

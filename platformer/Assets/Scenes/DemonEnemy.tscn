@@ -142,7 +142,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Flying",
-"speed": 10.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -199,12 +199,13 @@ shape = SubResource("RectangleShape2D_harg1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/Enemy" unique_id=2013523533]
 rotation = -1.5707964
 sprite_frames = SubResource("SpriteFrames_siqlw")
-animation = &"Attack"
+animation = &"Flying"
+frame_progress = 0.054015424
 
 [node name="Vision" type="Area2D" parent="PathFollow2D/Enemy" unique_id=1713394329]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Enemy/Vision" unique_id=1167927914]
-scale = Vector2(0.59, 0.59)
+scale = Vector2(0.805, 0.805)
 shape = SubResource("RectangleShape2D_28fmn")
 
 [connection signal="body_entered" from="PathFollow2D/Enemy/Vision" to="PathFollow2D/Enemy" method="_on_vision_body_entered"]

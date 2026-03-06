@@ -27,17 +27,17 @@ position = Vector2(104, 907)
 position = Vector2(42, -7)
 
 [node name="EnergyCell1" parent="EnergyCells" index="0" unique_id=293273046]
-position = Vector2(312, 740)
+position = Vector2(692, 728)
 
 [node name="EnergyCell2" parent="EnergyCells" index="1" unique_id=324211752]
-position = Vector2(333, 731)
+position = Vector2(515, 725)
 
 [node name="EnergyCell3" parent="EnergyCells" index="2" unique_id=1176371578]
-position = Vector2(271, 733)
+position = Vector2(426, 760)
 
 [node name="EnergyCell4" parent="EnergyCells" index="3" unique_id=1150399477]
-position = Vector2(366, 744)
+position = Vector2(228, 855)
 
 [node name="Enemy" parent="." index="5" unique_id=2016457016]
-position = Vector2(478, 670)
+position = Vector2(-546, 94)
 curve = SubResource("Curve2D_uidp5")

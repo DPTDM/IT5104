@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://b6skbslyrhlk1"]
 
 [ext_resource type="AudioStream" uid="uid://be60asa1gkpcx" path="res://Assets/Sounds/metalpipe.mp3" id="1_kcey8"]
+[ext_resource type="AudioStream" uid="uid://beuldn6qpw1fb" path="res://Assets/Sounds/Flap1.mp3" id="2_64dyr"]
 
 [node name="Sounds" type="Node2D" unique_id=1758480924 groups=["sounds"]]
 
 [node name="Death" type="AudioStreamPlayer" parent="." unique_id=802718545]
 stream = ExtResource("1_kcey8")
 volume_db = -35.682
+
+[node name="Flap" type="AudioStreamPlayer" parent="." unique_id=1926185039]
+stream = ExtResource("2_64dyr")
