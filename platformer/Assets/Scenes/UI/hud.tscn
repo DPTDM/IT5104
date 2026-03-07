@@ -3,6 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://sxd3cqdwjkqe" path="res://Assets/Sprites/energy_cell.png" id="1_7hthr"]
 [ext_resource type="Script" uid="uid://ddcy3ebrvyyk6" path="res://Assets/Scripts/hud.gd" id="1_w5d3o"]
 [ext_resource type="LabelSettings" uid="uid://dfkddsoqnm4id" path="res://Assets/UI Settings/new_label_settings.tres" id="3_rfqbw"]
+[ext_resource type="Texture2D" uid="uid://vowydkaea6jb" path="res://Assets/Sprites/Buttons/DashButton.png" id="4_0u0r5"]
+[ext_resource type="Texture2D" uid="uid://crqk3dh7fupag" path="res://Assets/Sprites/Buttons/ButtonRight.png" id="4_4a7rl"]
+[ext_resource type="Texture2D" uid="uid://bi7j3vxviqmlh" path="res://Assets/Sprites/Buttons/ButtonUp.png" id="5_l3gab"]
+[ext_resource type="Texture2D" uid="uid://clgpq78rmjbxm" path="res://Assets/Sprites/Buttons/ButtonDown.png" id="8_l3gab"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0u0r5"]
+radius = 129.77
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0u0r5"]
+load_path = "res://.godot/imported/ButtonLeft.png-59d66085ab9a477d82eeed591fd729b3.ctex"
 
 [node name="HUD" type="Control" unique_id=1975061872 node_paths=PackedStringArray("energy_cell_label", "portal_label") groups=["HUD"]]
 layout_mode = 3
@@ -46,3 +56,43 @@ offset_right = 244.0
 offset_bottom = 56.0
 text = "Portal Closed"
 label_settings = ExtResource("3_rfqbw")
+
+[node name="Buttons" type="Control" parent="." unique_id=5442881]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Jump" type="TouchScreenButton" parent="Buttons" unique_id=504852371]
+position = Vector2(928, 392)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_l3gab")
+shape = SubResource("CircleShape2D_0u0r5")
+action = "Jump"
+
+[node name="Left" type="TouchScreenButton" parent="Buttons" unique_id=548606488]
+position = Vector2(112, 352)
+scale = Vector2(0.5, 0.5)
+texture_normal = SubResource("CompressedTexture2D_0u0r5")
+shape = SubResource("CircleShape2D_0u0r5")
+action = "MoveLeft"
+
+[node name="Right" type="TouchScreenButton" parent="Buttons" unique_id=375291295]
+position = Vector2(256, 352)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_4a7rl")
+shape = SubResource("CircleShape2D_0u0r5")
+action = "MoveRight"
+
+[node name="Dash" type="TouchScreenButton" parent="Buttons" unique_id=550668389]
+position = Vector2(776, 400)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_0u0r5")
+shape = SubResource("CircleShape2D_0u0r5")
+action = "Dash"
+
+[node name="Down" type="TouchScreenButton" parent="Buttons" unique_id=386604307]
+position = Vector2(184, 480)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_l3gab")
+shape = SubResource("CircleShape2D_0u0r5")
+action = "MoveDown"

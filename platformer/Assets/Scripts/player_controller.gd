@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 class_name PlayerController
 
 @export var speed = 18.0
@@ -14,22 +13,22 @@ class_name PlayerController
 
 var speed_multiplier = 30.0
 var jump_multiplier = -30.0
-var direction = 0
+var direction = 0              # ✅ single final direction used everywhere
+var hud_direction = 0           # HUD input
 var is_dashing = false
 var dash_timer = 0.0
 var dash_on_cooldown = false
 
 func _input(event):
 	if event.is_action_pressed("Jump") and is_on_floor():
-		velocity.y = jump_pwr * jump_multiplier
-		jump_sound.play()
+		jump()
 
 	if event.is_action_pressed("MoveDown"):
 		set_collision_mask_value(10, false)
 	else:
 		set_collision_mask_value(10, true)
 
-	# Dash input (only if enabled and not on cooldown)
+	# Dash input (keyboard)
 	if event.is_action_pressed("Dash") and not is_dashing and direction != 0 and can_dash and not dash_on_cooldown:
 		start_dash()
 
@@ -43,14 +42,18 @@ func _physics_process(delta: float) -> void:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 
+		# ✅ Decide direction: HUD first, fallback to keyboard
+		direction = hud_direction
+		if direction == 0:
+			direction = Input.get_axis("MoveLeft", "MoveRight")
+
 		# Movement
-		direction = Input.get_axis("MoveLeft", "MoveRight")
-		if direction:
+		if direction != 0:
 			velocity.x = direction * speed * speed_multiplier
 		else:
 			velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
 
-	# 🔹 Reset cooldown when landing
+	# Reset cooldown when landing
 	if is_on_floor() and dash_on_cooldown:
 		dash_on_cooldown = false
 
@@ -67,12 +70,14 @@ func start_dash():
 	# Put dash on cooldown
 	dash_on_cooldown = true
 	await get_tree().create_timer(dash_cooldown).timeout
-	# Cooldown will auto-reset when landing, but this ensures a minimum wait
-
 
 func teleport_to_location(new_location):
 	camera.position_smoothing_enabled = false
 	position = new_location
 	await get_tree().physics_frame
 	camera.position_smoothing_enabled = true
-	
+
+func jump():
+	if is_on_floor():
+		velocity.y = jump_pwr * jump_multiplier
+		jump_sound.play()

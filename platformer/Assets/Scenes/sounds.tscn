@@ -7,7 +7,7 @@
 
 [node name="Death" type="AudioStreamPlayer" parent="." unique_id=802718545]
 stream = ExtResource("1_kcey8")
-volume_db = -35.682
+volume_db = -21.815
 
 [node name="Flap" type="AudioStreamPlayer" parent="." unique_id=1926185039]
 stream = ExtResource("2_64dyr")
