@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2teb4k3ep5la"]
 
-[ext_resource type="PackedScene" uid="uid://c71sjecm37ws2" path="res://Assets/Scenes/AreaTemplate/area_template.tscn" id="1_si01f"]
+[ext_resource type="PackedScene" uid="uid://c71sjecm37ws2" path="res://Assets/Scenes/AreaTemplate/area_template.tscn" id="1_uidp5"]
 [ext_resource type="PackedScene" uid="uid://cxvgf61ua6bl" path="res://Assets/Scenes/AreaTemplate/Spike.tscn" id="2_y4hc0"]
 
 [sub_resource type="Curve2D" id="Curve2D_fsu62"]
@@ -10,7 +10,7 @@ _data = {
 }
 point_count = 2
 
-[node name="Area3" unique_id=1661169590 instance=ExtResource("1_si01f")]
+[node name="Area3" unique_id=1661169590 instance=ExtResource("1_uidp5")]
 
 [node name="PlayerStartPosition" parent="." index="0" unique_id=1418986893]
 position = Vector2(203, 744)

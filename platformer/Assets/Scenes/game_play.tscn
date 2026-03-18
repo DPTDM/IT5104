@@ -1,17 +1,38 @@
 [gd_scene format=3 uid="uid://da7q4ntt0kb3y"]
 
-[ext_resource type="PackedScene" uid="uid://bx6lc7xgfja4x" path="res://Assets/Scenes/Player.tscn" id="1_4jfly"]
 [ext_resource type="PackedScene" uid="uid://c3wuyy72i4wnt" path="res://Assets/Scenes/UI/hud.tscn" id="1_08hw0"]
 [ext_resource type="PackedScene" uid="uid://b6skbslyrhlk1" path="res://Assets/Scenes/sounds.tscn" id="3_th2nd"]
 
 [node name="GamePlay" type="Node2D" unique_id=1538990903]
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2057262012]
+layer = 2
+
+[node name="HUD" parent="CanvasLayer2" unique_id=1975061872 instance=ExtResource("1_08hw0")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=302480601]
 
-[node name="HUD" parent="CanvasLayer" unique_id=1975061872 instance=ExtResource("1_08hw0")]
+[node name="SubViewportContainerP1" type="SubViewportContainer" parent="CanvasLayer" unique_id=1611370838]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
 
-[node name="Player" parent="." unique_id=518383510 instance=ExtResource("1_4jfly")]
+[node name="SubViewportP1" type="SubViewport" parent="CanvasLayer/SubViewportContainerP1" unique_id=170286330]
+disable_3d = true
+handle_input_locally = false
+size = Vector2i(512, 597)
+render_target_update_mode = 4
 
-[node name="Area" type="Node2D" parent="." unique_id=1042464018 groups=["area_container"]]
+[node name="SubViewportContainerP2" type="SubViewportContainer" parent="CanvasLayer" unique_id=1014465069]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="SubViewportP2" type="SubViewport" parent="CanvasLayer/SubViewportContainerP2" unique_id=901022237]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="AreaContainer" type="Node2D" parent="." unique_id=1042464018 groups=["area_container"]]
 
 [node name="Sounds" parent="." unique_id=1758480924 instance=ExtResource("3_th2nd")]
